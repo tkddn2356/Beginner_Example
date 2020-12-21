@@ -89,6 +89,7 @@
             });
         });
     });
+
     function write(board, callback, error) {
         $.ajax({
             type: 'post',

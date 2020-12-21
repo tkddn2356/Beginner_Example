@@ -14,6 +14,7 @@ public class Board {
 
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date created_at;
+    // 데이터베이스에서 유닉스타임으로 가져오기때문에 출력형식을 지정해야합니다.
     private Date updated_at;
 
     public Long getId() {

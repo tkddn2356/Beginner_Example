@@ -22,7 +22,7 @@ public class AuthInterceptor extends HandlerInterceptorAdapter {
             throw new Exception();
         }
 
-        else if  (!token.startsWith("Bearer ")){
+        else if  (!token.startsWith("Bearer ")){ // 토큰이 Bearer 인증타입을 지키지않고 전송이 될때
             throw new Exception();
         }
         else { //FIX 정수현 :: header Authorization을 가지고 있는 경우 valid를 체크한다.

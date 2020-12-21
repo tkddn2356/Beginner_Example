@@ -13,22 +13,23 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 import java.util.Arrays;
 
+
+@EnableSwagger2 // Swagger2 버전을 활성화하는 어노테이션
 @Configuration
-@EnableSwagger2
 public class SwaggerConfig {
     @Bean
     public Docket api() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
-                .select()
-                .apis(RequestHandlerSelectors.basePackage("com.example.controller"))
+                .select() // ApiSelectorBuilder를 생성
+                .apis(RequestHandlerSelectors.basePackage("com.example.controller"))//API 스펙이 작성되어 있는 패키지를 지정
                 .paths(PathSelectors.any())
                 .build()
                 .securitySchemes(Arrays.asList(apiKey()));
     }
 
     private ApiKey apiKey() {
-        return new ApiKey("Authorization(Bearer + jwtToken)", "Authorization", "header");
+        return new ApiKey("Authorization", "Authorization", "header");
     }
 
     private ApiInfo apiInfo() {

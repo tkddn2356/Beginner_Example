@@ -30,6 +30,7 @@ public class JwtUtil {
     public void JwtUtil() {
         this.key = Keys.hmacShaKeyFor((myKey+myKey).getBytes());
     }
+
     public String generate(Long id) { // TOKEN 생성
         //FIX 정수현 ::  token은 로그인한 아이디보단 id키 값이 더 좋을 것 같습니다.
         // header
