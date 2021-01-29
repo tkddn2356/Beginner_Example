@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class MainController {
 
-
     @RequestMapping(value = "/main", method = RequestMethod.GET)
     public String main() {
         return "main";

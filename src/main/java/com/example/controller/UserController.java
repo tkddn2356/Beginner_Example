@@ -41,9 +41,9 @@ public class UserController {
     @ResponseBody
     @RequestMapping(value="/user/login", method = RequestMethod.POST, consumes = "application/json")
     public ResponseEntity login(@RequestBody User user){
-        Map<String,Object> result =  userService.login(user);
-        if ( result!= null) { // login 성공
-            return new ResponseEntity<Map<String, Object>>(result, HttpStatus.OK);
+        String token =  userService.login(user);
+        if ( token!= null) { // login 성공
+            return new ResponseEntity<String>(token, HttpStatus.OK);
         }
         else{ // login 실패
             return new ResponseEntity<String>("login Fail", HttpStatus.BAD_REQUEST);

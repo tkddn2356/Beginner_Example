@@ -5,7 +5,6 @@ create table beginner_example_database.board(
     title varchar(200) not null,
     content varchar(3000) not null,
     user_id varchar(50) not null,
-    nickname varchar(50),
 	updated_at timestamp default current_timestamp,
     created_at timestamp default current_timestamp
 );

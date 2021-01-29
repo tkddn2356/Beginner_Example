@@ -32,7 +32,7 @@ public class BoardController {
     }
 
     @ResponseBody
-    @RequestMapping(value = "/board/list", method = RequestMethod.GET)
+    @RequestMapping(value = "/boards", method = RequestMethod.GET)
     public ResponseEntity<List<Board>> getList(){
         return new ResponseEntity<>(boardService.getList(), HttpStatus.OK);
     }
@@ -47,7 +47,6 @@ public class BoardController {
     @ResponseBody
     @RequestMapping(value="/api/board",  method =  RequestMethod.POST, consumes = "application/json")
     public ResponseEntity<String> write(@ApiParam(value = "(required: title, content)", required = true) @RequestBody Board board){
-
         return boardService.createBoard(board) ? new ResponseEntity<>("success", HttpStatus.OK)
                 : new ResponseEntity<>("fail", HttpStatus.INTERNAL_SERVER_ERROR);
     }

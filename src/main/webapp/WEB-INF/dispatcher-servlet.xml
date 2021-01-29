@@ -28,6 +28,8 @@
         </mvc:interceptor>
     </mvc:interceptors>
 
+
+
     <mvc:resources location="classpath:/META-INF/resources/" mapping="swagger-ui.html"></mvc:resources>
     <mvc:resources location="classpath:/META-INF/resources/webjars/"  mapping="/webjars/**"></mvc:resources>
 

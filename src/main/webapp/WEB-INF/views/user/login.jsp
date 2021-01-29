@@ -86,7 +86,7 @@
             login(login_info, function (result) {
                 alert("success");
                 console.log(result);
-                sessionStorage.setItem("token", result.token)
+                sessionStorage.setItem("token", result)
                 document.location.href = "/main"
             })
         });

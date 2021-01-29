@@ -6,7 +6,7 @@ import java.util.Map;
 
 public interface UserService {
 
-    public Map<String, Object> login(User user);
+    public String login(User user);
     public boolean register(User user);
 
 }

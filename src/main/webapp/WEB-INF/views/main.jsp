@@ -113,7 +113,7 @@
     function getList(callback, error) {
         $.ajax({
             type: 'get',
-            url: '/board/list/',
+            url: '/boards/',
             contentType: "application/json; charset=utf-8",
             beforeSend: function (xhr) {
                 xhr.setRequestHeader("Authorization", "Bearer " + sessionStorage.getItem("token"))

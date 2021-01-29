@@ -98,9 +98,7 @@
     });
 
     function read(id, callback, error) {
-
         $.get("/board/" + id, function (result) {
-
             if (callback) {
                 callback(result);
             }

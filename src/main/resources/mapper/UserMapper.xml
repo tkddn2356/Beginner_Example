@@ -15,6 +15,10 @@
 		SELECT * FROM user WHERE id = #{id}
 	</select>
 
+	<select id="getNicknameById" resultType="String">
+		SELECT nickname FROM user WHERE id = #{id};
+	</select>
+
 
 
 

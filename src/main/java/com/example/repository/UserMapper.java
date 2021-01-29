@@ -10,5 +10,6 @@ public interface UserMapper {
     public int createUser(User user);
     public User getUserByAccountId(String account_id);
     public User getUserById(Long id);
+    public String getNicknameById(Long id);
 
 }
